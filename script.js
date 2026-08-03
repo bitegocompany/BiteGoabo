@@ -132,7 +132,7 @@ function login(){
 
     fetch(
 
-    "https://script.google.com/macros/s/AKfycbw5GycPuOR7yc5pNlpuBATPZ3c7RAIYJ5tiWqqCJ97RDQw1JgyJd-wAYOU53oPzcIs/exec",
+    "https://script.google.com/macros/s/AKfycbw4nnBfYhFXNo_WVmkvhCeDROR0Hwd7w81YOADDGLx4SDQZbIkv9cNoWKPFO8feSvOR/exec",
 
     {
 
@@ -483,9 +483,9 @@ function downloadCoupon(){
 
     const link = document.createElement("a");
 
-    link.href = "./MostSecure.csv";
+    link.href = "./Aboulafia.csv";
 
-    link.setAttribute("download", "MostSecure.csv");
+    link.setAttribute("download", "Aboulafia.csv");
 
     link.style.display = "none";
 
