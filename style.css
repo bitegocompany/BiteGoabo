@@ -1,0 +1,2037 @@
+/* =========================
+   BiteGo v4 Premium Style
+========================= */
+
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Heebo',sans-serif;
+}
+
+
+html{
+    scroll-behavior:smooth;
+}
+
+
+body{
+
+    background:#FFFAF5;
+    color:#061C46;
+    overflow-x:hidden;
+
+}
+
+
+
+
+/* =========================
+ HEADER
+========================= */
+
+
+header{
+
+    position:sticky;
+    top:0;
+
+    z-index:1000;
+
+    height:90px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:0 80px;
+
+    background:rgba(255,250,245,.75);
+
+    backdrop-filter:blur(18px);
+
+    border-bottom:1px solid rgba(6,28,70,.08);
+
+}
+
+
+
+.logo{
+
+    font-size:42px;
+
+    font-weight:900;
+
+}
+
+
+
+.logo span,
+footer span,
+.login-box span{
+
+    color:#F7931E;
+
+}
+
+
+
+nav{
+
+    display:flex;
+
+    gap:35px;
+
+}
+
+
+
+nav a{
+
+    text-decoration:none;
+
+    color:#061C46;
+
+    font-size:18px;
+
+    transition:.3s;
+
+}
+
+
+
+nav a:hover{
+
+    color:#F7931E;
+
+}
+
+
+
+
+
+
+/* =========================
+ HERO
+========================= */
+
+
+.hero{
+
+
+    min-height:85vh;
+
+
+    display:flex;
+
+
+    align-items:center;
+
+
+    justify-content:space-between;
+
+
+    padding:80px;
+
+
+    position:relative;
+
+
+    overflow:hidden;
+
+
+}
+
+
+
+.hero-shape{
+
+
+    position:absolute;
+
+
+    width:500px;
+
+
+    height:500px;
+
+
+    background:#F7931E;
+
+
+    opacity:.08;
+
+
+    border-radius:50%;
+
+
+    left:-200px;
+
+
+    top:100px;
+
+
+}
+
+
+
+
+.hero-text{
+
+
+    width:45%;
+
+
+    z-index:2;
+
+
+}
+
+
+
+
+.hero-text h1{
+
+
+    font-size:72px;
+
+
+    line-height:1.1;
+
+
+    font-weight:900;
+
+
+}
+
+
+
+.hero-text h1 span{
+
+
+    color:#F7931E;
+
+
+}
+
+
+
+
+
+.hero-text p{
+
+
+    font-size:25px;
+
+
+    color:#555;
+
+
+    line-height:1.6;
+
+
+    margin:30px 0 25px;
+
+
+}
+
+
+
+
+
+
+/* =========================
+ SEARCH BAR
+========================= */
+
+
+.search-box{
+
+
+    width:100%;
+
+
+    max-width:520px;
+
+
+    height:65px;
+
+
+    background:white;
+
+
+    border-radius:20px;
+
+
+    display:flex;
+
+
+    align-items:center;
+
+
+    padding:0 25px;
+
+
+    gap:15px;
+
+
+    box-shadow:
+
+
+    0 20px 50px rgba(6,28,70,.12);
+
+
+    margin-bottom:20px;
+
+
+    border:1px solid rgba(6,28,70,.05);
+
+
+}
+
+
+
+
+.search-icon{
+
+
+    font-size:25px;
+
+
+}
+
+
+
+
+.search-box input{
+
+
+    border:none;
+
+
+    outline:none;
+
+
+    width:100%;
+
+
+    background:transparent;
+
+
+    font-size:22px;
+
+
+    color:#061C46;
+
+
+    font-weight:500;
+
+
+}
+
+
+
+
+/* =========================
+ SEARCH TAGS
+========================= */
+
+
+.popular-tags{
+
+
+    display:flex;
+
+
+    flex-wrap:wrap;
+
+
+    gap:12px;
+
+
+    margin-bottom:35px;
+
+
+}
+
+
+
+.popular-tags span{
+
+
+    background:white;
+
+
+    padding:8px 18px;
+
+
+    border-radius:30px;
+
+
+    font-size:16px;
+
+
+    color:#061C46;
+
+
+    box-shadow:
+
+
+    0 10px 25px rgba(0,0,0,.08);
+
+
+    transition:.3s;
+
+
+    cursor:pointer;
+
+
+}
+
+
+
+.popular-tags span:hover{
+
+
+    transform:translateY(-5px);
+
+
+    background:#F7931E;
+
+
+    color:white;
+
+
+}
+
+
+
+
+
+
+/* =========================
+ BUTTON
+========================= */
+
+
+.cta{
+
+
+    background:#F7931E;
+
+
+    color:white;
+
+
+    border:none;
+
+
+    padding:18px 45px;
+
+
+    border-radius:20px;
+
+
+    font-size:22px;
+
+
+    font-weight:700;
+
+
+    cursor:pointer;
+
+
+    box-shadow:
+
+
+    0 20px 45px rgba(247,147,30,.35);
+
+
+    transition:.3s;
+
+
+}
+
+
+
+.cta:hover{
+
+
+    transform:translateY(-6px);
+
+
+    box-shadow:
+
+
+    0 30px 60px rgba(247,147,30,.45);
+
+
+}
+
+
+
+
+
+
+/* =========================
+ HERO IMAGE
+========================= */
+
+
+.hero-image{
+
+
+    width:45%;
+
+
+    position:relative;
+
+
+}
+
+
+
+.hero-image img{
+
+
+    width:100%;
+
+
+    border-radius:45px;
+
+
+    box-shadow:
+
+
+    0 40px 90px rgba(6,28,70,.2);
+
+
+    animation:float 8s infinite ease-in-out;
+
+
+}
+
+
+
+
+@keyframes float{
+
+
+    50%{
+
+
+        transform:translateY(-20px);
+
+
+    }
+
+
+}
+
+
+
+
+
+/* =========================
+ FLOATING CARDS
+========================= */
+
+
+.delivery-card{
+
+
+    position:absolute;
+
+
+    bottom:40px;
+
+
+    left:-45px;
+
+
+    background:white;
+
+
+    padding:25px;
+
+
+    width:230px;
+
+
+    border-radius:25px;
+
+
+    box-shadow:
+
+
+    0 25px 70px rgba(0,0,0,.15);
+
+
+    animation:cardFloat 4s infinite;
+
+
+}
+
+
+
+
+.status{
+
+
+    display:flex;
+
+
+    align-items:center;
+
+
+    gap:10px;
+
+
+    font-weight:bold;
+
+
+    margin-bottom:10px;
+
+
+}
+
+
+
+.status span{
+
+
+    width:12px;
+
+
+    height:12px;
+
+
+    background:#23c55e;
+
+
+    border-radius:50%;
+
+
+    box-shadow:0 0 15px #23c55e;
+
+
+}
+
+
+
+
+.food-card{
+
+    position:absolute;
+
+    top:-25px;
+    left:-45px;
+
+    display:flex;
+    align-items:center;
+    gap:15px;
+
+    background:white;
+
+    padding:18px 24px;
+
+    border-radius:22px;
+
+    box-shadow:
+    0 20px 55px rgba(0,0,0,.12);
+
+    animation:cardFloat 5s infinite;
+
+    z-index:10;
+
+}
+
+
+
+
+.food-icon{
+
+
+    font-size:28px;
+
+
+}
+
+
+
+.food-card strong{
+
+
+    font-size:28px;
+
+
+}
+
+
+
+@keyframes cardFloat{
+
+
+    50%{
+
+
+        transform:translateY(-15px);
+
+
+    }
+
+
+}
+
+/* =========================
+ WHY BITEGO
+========================= */
+
+
+.why{
+
+    padding:100px 80px;
+
+    text-align:center;
+
+}
+
+
+
+.why h2{
+
+    font-size:50px;
+
+}
+
+
+
+.section-subtitle{
+
+    color:#666;
+
+    font-size:22px;
+
+    margin:20px 0 60px;
+
+}
+
+
+
+
+.why-grid{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:35px;
+
+}
+
+
+
+
+
+.why-card{
+
+
+    background:white;
+
+
+    width:330px;
+
+
+    padding:40px;
+
+
+    border-radius:30px;
+
+
+    box-shadow:
+
+    0 20px 60px rgba(0,0,0,.08);
+
+
+    transition:.35s;
+
+
+}
+
+
+
+.why-card:hover{
+
+
+    transform:translateY(-12px);
+
+
+}
+
+
+
+
+
+.why-icon{
+
+
+    font-size:55px;
+
+
+    margin-bottom:20px;
+
+
+}
+
+
+
+
+.why-card h3{
+
+
+    font-size:28px;
+
+
+    margin-bottom:15px;
+
+
+}
+
+
+
+
+.why-card p{
+
+
+    color:#666;
+
+
+    font-size:18px;
+
+
+}
+
+
+
+
+
+
+/* =========================
+ FEATURES
+========================= */
+
+
+.features{
+
+
+    display:flex;
+
+
+    justify-content:center;
+
+
+    gap:40px;
+
+
+    padding:80px;
+
+
+}
+
+
+
+
+
+.card{
+
+
+    background:white;
+
+
+    width:330px;
+
+
+    padding:45px 35px;
+
+
+    border-radius:30px;
+
+
+    text-align:center;
+
+
+    box-shadow:
+
+
+    0 20px 60px rgba(0,0,0,.08);
+
+
+    transition:.35s;
+
+
+}
+
+
+
+
+.card:hover{
+
+
+    transform:translateY(-12px);
+
+
+}
+
+
+
+
+
+.icon svg{
+
+
+    width:55px;
+
+
+    height:55px;
+
+
+    stroke:#F7931E;
+
+
+    fill:none;
+
+
+    stroke-width:2;
+
+
+}
+
+
+
+
+
+.card h2{
+
+
+    margin:25px 0 15px;
+
+
+    font-size:28px;
+
+
+}
+
+
+
+
+
+.card p{
+
+
+    color:#666;
+
+
+    font-size:18px;
+
+
+}
+
+
+
+
+
+
+/* =========================
+ HOW IT WORKS
+========================= */
+
+
+.how{
+
+
+    padding:100px 80px;
+
+
+    text-align:center;
+
+
+}
+
+
+
+
+
+.how h2{
+
+
+    font-size:45px;
+
+
+    margin-bottom:70px;
+
+
+}
+
+
+
+
+
+.steps{
+
+
+    display:flex;
+
+
+    justify-content:center;
+
+
+    gap:100px;
+
+
+}
+
+
+
+
+
+.steps div{
+
+
+    width:250px;
+
+
+}
+
+
+
+
+
+.steps strong{
+
+
+    width:80px;
+
+
+    height:80px;
+
+
+    margin:auto;
+
+
+    display:flex;
+
+
+    align-items:center;
+
+
+    justify-content:center;
+
+
+    background:#061C46;
+
+
+    color:white;
+
+
+    border-radius:50%;
+
+
+    font-size:35px;
+
+
+    box-shadow:
+
+
+    0 15px 35px rgba(6,28,70,.25);
+
+
+}
+
+
+
+
+
+
+.steps h3{
+
+
+    margin-top:25px;
+
+
+    font-size:28px;
+
+
+    color:#061C46;
+
+
+}
+
+
+
+
+
+.steps p{
+
+
+    margin-top:15px;
+
+
+    color:#666;
+
+
+    font-size:18px;
+
+
+    line-height:1.6;
+
+
+}
+
+
+
+
+
+
+
+/* =========================
+ LOGIN MODAL
+========================= */
+
+
+
+.modal{
+
+
+    display:none;
+
+
+    position:fixed;
+
+
+    inset:0;
+
+
+    background:
+
+
+    rgba(6,28,70,.65);
+
+
+    backdrop-filter:blur(10px);
+
+
+    align-items:center;
+
+
+    justify-content:center;
+
+
+    z-index:2000;
+
+
+}
+
+
+
+
+
+
+.login-box{
+
+
+    position:relative;
+
+
+    background:white;
+
+
+    width:420px;
+
+
+    padding:45px;
+
+
+    border-radius:35px;
+
+
+    text-align:center;
+
+
+    box-shadow:
+
+
+    0 40px 100px rgba(0,0,0,.25);
+
+
+    animation:popup .35s ease;
+
+
+}
+
+
+
+
+
+.login-box h2{
+
+
+    font-size:38px;
+
+
+}
+
+
+
+
+
+.login-box p{
+
+
+    color:#666;
+
+
+    margin:15px 0 30px;
+
+
+}
+
+
+
+
+
+.login-box input{
+
+
+    width:100%;
+
+
+    padding:16px;
+
+
+    margin:10px 0;
+
+
+    border-radius:15px;
+
+
+    border:1px solid #ddd;
+
+
+    font-size:18px;
+
+
+}
+
+
+
+
+
+.login-box button:not(.close){
+
+
+    width:100%;
+
+
+    padding:16px;
+
+
+    background:#F7931E;
+
+
+    color:white;
+
+
+    border:none;
+
+
+    border-radius:15px;
+
+
+    font-size:20px;
+
+
+    font-weight:bold;
+
+
+    cursor:pointer;
+
+
+}
+
+
+
+
+
+.login-box .close{
+
+
+    position:absolute;
+
+
+    top:15px;
+
+
+    left:20px;
+
+
+    width:40px;
+
+
+    height:40px;
+
+
+    background:transparent;
+
+
+    border:none;
+
+
+    color:#061C46;
+
+
+    font-size:32px;
+
+
+    cursor:pointer;
+
+
+    transition:.3s;
+
+
+}
+
+
+
+
+
+.login-box .close:hover{
+
+
+    color:#F7931E;
+
+
+    transform:rotate(90deg);
+
+
+}
+
+
+
+
+
+
+#warning{
+
+
+    display:none;
+
+
+    color:#e53935;
+
+
+    margin:10px 0;
+
+
+}
+
+
+
+
+
+@keyframes popup{
+
+
+    from{
+
+
+        opacity:0;
+
+
+        transform:scale(.85);
+
+
+    }
+
+
+
+    to{
+
+
+        opacity:1;
+
+
+        transform:scale(1);
+
+
+    }
+
+
+}
+
+ 
+/* =========================
+ SUCCESS PAGE
+========================= */
+
+
+.error-page{
+
+
+    display:none;
+
+
+    height:100vh;
+
+
+    align-items:center;
+
+
+    justify-content:center;
+
+
+    background:#FFFAF5;
+
+
+}
+
+
+
+.error-card{
+
+
+    background:white;
+
+
+    padding:60px;
+
+
+    border-radius:35px;
+
+
+    text-align:center;
+
+
+    box-shadow:
+
+
+    0 30px 90px rgba(0,0,0,.15);
+
+
+    max-width:500px;
+
+
+}
+
+
+
+
+.error-card h1{
+
+
+    margin:25px 0;
+
+
+    font-size:38px;
+
+
+}
+
+
+
+
+.error-card p{
+
+
+    color:#666;
+
+
+    font-size:20px;
+
+
+    line-height:1.7;
+
+
+}
+
+
+
+
+
+.success-symbol{
+
+
+    width:90px;
+
+
+    height:90px;
+
+
+    margin:0 auto 25px;
+
+
+    background:#23c55e;
+
+
+    color:white;
+
+
+    border-radius:50%;
+
+
+    display:flex;
+
+
+    align-items:center;
+
+
+    justify-content:center;
+
+
+    font-size:55px;
+
+
+    box-shadow:
+
+
+    0 15px 40px rgba(35,197,94,.35);
+
+
+}
+
+
+
+
+
+/* =========================
+ FOOTER
+========================= */
+
+
+footer{
+
+
+    background:#061C46;
+
+
+    color:white;
+
+
+    padding:60px 80px;
+
+
+}
+
+
+
+
+.footer-content{
+
+
+    display:flex;
+
+
+    justify-content:space-between;
+
+
+    align-items:center;
+
+
+    max-width:1100px;
+
+
+    margin:auto;
+
+
+    gap:40px;
+
+
+}
+
+
+
+
+
+.footer-logo{
+
+
+    font-size:40px;
+
+
+    font-weight:900;
+
+
+}
+
+
+
+
+
+.footer-content p{
+
+
+    color:#ddd;
+
+
+    font-size:18px;
+
+
+    margin-top:15px;
+
+
+}
+
+
+
+
+
+.footer-contact{
+
+
+    text-align:right;
+
+
+}
+
+
+
+
+
+.footer-contact h3{
+
+
+    font-size:28px;
+
+
+    margin-bottom:20px;
+
+
+}
+
+
+
+
+
+.footer-contact p{
+
+
+    color:white;
+
+
+    margin:10px 0;
+
+
+}
+
+
+
+
+
+.footer-contact a{
+
+
+    display:inline-block;
+
+
+    margin-top:15px;
+
+
+    padding:12px 25px;
+
+
+    border-radius:20px;
+
+
+    background:#F7931E;
+
+
+    color:white;
+
+
+    text-decoration:none;
+
+
+    font-weight:bold;
+
+
+    transition:.3s;
+
+
+}
+
+
+
+
+.footer-contact a:hover{
+
+
+    transform:translateY(-5px);
+
+
+}
+
+
+
+
+footer hr{
+
+
+    border:none;
+
+
+    height:1px;
+
+
+    background:rgba(255,255,255,.2);
+
+
+    margin:40px 0 25px;
+
+
+}
+
+
+
+
+.copyright{
+
+
+    text-align:center;
+
+
+    color:#aaa;
+
+
+    font-size:15px;
+
+
+}
+
+
+
+
+
+
+/* =========================
+ SCROLL ANIMATION
+========================= */
+
+
+.card,
+.steps div,
+.why-card{
+
+
+    opacity:1;
+
+
+    transform:translateY(0);
+
+
+    transition:.8s ease;
+
+
+}
+
+
+
+
+.show{
+
+
+    opacity:1;
+
+
+    transform:none;
+
+
+}
+
+
+
+
+
+
+
+
+/* =========================
+ MOBILE
+========================= */
+
+
+@media(max-width:900px){
+
+
+
+header{
+
+
+    padding:0 25px;
+
+
+}
+
+
+
+.logo{
+
+
+    font-size:34px;
+
+
+}
+
+
+
+nav{
+
+    display:flex;
+
+    gap:15px;
+
+    flex-wrap:wrap;
+
+    justify-content:left;
+
+}
+
+
+
+
+.hero{
+
+
+    flex-direction:column;
+
+
+    padding:40px 25px;
+
+
+}
+
+
+
+
+.hero-text,
+.hero-image{
+
+
+    width:100%;
+
+
+    text-align:center;
+
+
+}
+
+
+
+
+.hero-text h1{
+
+
+    font-size:45px;
+
+
+}
+
+
+
+
+
+.hero-text p{
+
+
+    font-size:20px;
+
+
+}
+
+
+
+
+
+.search-box{
+
+
+    max-width:100%;
+
+
+    margin:auto;
+
+
+    margin-bottom:20px;
+
+
+}
+
+
+
+
+
+.popular-tags{
+
+
+    justify-content:center;
+
+
+}
+
+
+
+
+.hero-image{
+
+
+    margin-top:50px;
+
+
+}
+
+
+
+
+
+
+
+
+
+
+.food-card,
+.delivery-card{
+
+    transform:scale(.75);
+
+    animation:none;
+
+
+}
+
+
+
+
+
+.features,
+.why-grid{
+
+
+    flex-direction:column;
+
+
+    padding:40px 25px;
+
+
+}
+
+
+
+
+
+.card,
+.why-card{
+
+
+    width:100%;
+
+
+}
+
+
+
+
+
+.how{
+
+
+    padding:70px 25px;
+
+
+}
+
+
+
+
+
+.steps{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    gap:40px;
+
+}
+
+.steps div{
+
+    width:100%;
+
+    max-width:320px;
+
+    margin:0 auto;
+
+    padding:0 20px;
+
+    text-align:center;
+
+}
+
+
+
+
+
+.login-box{
+
+
+    width:90%;
+
+
+    padding:35px;
+
+
+}
+
+
+
+
+
+.footer-content{
+
+
+    flex-direction:column;
+
+
+    text-align:center;
+
+
+}
+
+
+
+
+
+.footer-contact{
+
+
+    text-align:center;
+
+
+}
+
+
+
+footer{
+
+
+    padding:50px 25px;
+
+
+}
+
+
+
+}
