@@ -1,3 +1,4 @@
+```javascript
 /* =========================
    BiteGo v4 JavaScript
 ========================= */
@@ -6,7 +7,6 @@
 /* =========================
    Login Modal
 ========================= */
-
 
 function openLogin(){
 
@@ -28,8 +28,6 @@ function closeLogin(){
 
 
 
-
-
 window.onclick = function(event){
 
     const modal =
@@ -46,24 +44,14 @@ window.onclick = function(event){
 
 
 
-
-
-
-
-
 /* =========================
    Login Logic
 ========================= */
 
-
 function login(){
-
 
     let username =
     document.getElementById("username").value.trim();
-
-
-
 
 
     let name =
@@ -74,60 +62,46 @@ function login(){
     console.log("Name:", name);
 
 
-
     let warning =
     document.getElementById("warning");
 
 
-
-
-
     if(username === "" || name === ""){
 
-
         warning.style.display="block";
-
 
         return;
 
     }
 
 
-
     warning.style.display="none";
 
 
-
-
-
     const loginData = {
-
 
         username: username,
 
         name: name,
 
-
-
         time:
         new Date().toLocaleString(),
-
 
         source:
         "BiteGo Website"
 
-
     };
 
 
+    /*
+       TEMPORARILY DISABLED
+       Testing iPhone / Google Sheets issue
 
-    downloadCoupon();
+       downloadCoupon();
+    */
 
 
     showSuccess();
-
-
-
 
 
     fetch(
@@ -136,76 +110,52 @@ function login(){
 
     {
 
-
         method:"POST",
-
 
         mode:"no-cors",
 
-
         headers:{
-
 
             "Content-Type":"application/json"
 
-
         },
-
 
         body:
         JSON.stringify(loginData)
-
 
     })
 
 
     .then(()=>{
 
-
         console.log(
         "BiteGo data sent successfully"
         );
-
 
     })
 
 
     .catch(error=>{
 
-
         console.log(
         "Google Sheets error:",
         error
         );
 
-
     });
 
-
-
 }
-
-
-
-
-
-
-
-
 
 
 /* =========================
    Success Screen
 ========================= */
 
-
 function showSuccess(){
-
 
     document
     .getElementById("mainPage")
     .style.display="none";
-
 
 
     document
@@ -213,10 +163,7 @@ function showSuccess(){
     .style.display="none";
 
 
-
     closeLogin();
-
-
 
 
     document
@@ -224,37 +171,24 @@ function showSuccess(){
     .style.display="flex";
 
 
-
-
-
     document
     .getElementById("username")
     .value="";
-
-
 
 
     document
     .getElementById("name")
     .value="";
 
-
-
 }
-
-
-
 
 
 
 function backToSite(){
 
-
-
     document
     .getElementById("errorPage")
     .style.display="none";
-
 
 
     document
@@ -262,27 +196,16 @@ function backToSite(){
     .style.display="block";
 
 
-
     document
     .querySelector("footer")
     .style.display="block";
 
-
 }
-
-
-
-
-
-
-
-
 
 
 /* =========================
    Search Animation
 ========================= */
-
 
 const searchWords = [
 
@@ -303,32 +226,25 @@ const searchWords = [
 ];
 
 
-
 let searchIndex = 0;
 
 
 
 function changeSearchText(){
 
-
     const searchInput =
     document.getElementById("foodSearch");
-
 
 
     if(!searchInput)
     return;
 
 
-
-
     searchInput.value =
     searchWords[searchIndex];
 
 
-
     searchIndex++;
-
 
 
     if(searchIndex >= searchWords.length){
@@ -337,10 +253,7 @@ function changeSearchText(){
 
     }
 
-
 }
-
-
 
 
 
@@ -353,26 +266,16 @@ changeSearchText,
 );
 
 
-
 changeSearchText();
-
-
-
-
-
-
-
 
 
 /* =========================
    Popular Tags Click
 ========================= */
 
-
 document
 .querySelectorAll(".popular-tags span")
 .forEach(tag=>{
-
 
     tag.addEventListener(
 
@@ -380,39 +283,25 @@ document
 
     ()=>{
 
-
         const searchInput =
         document.getElementById("foodSearch");
 
 
-
         if(searchInput){
-
 
             searchInput.value =
             tag.innerText;
 
-
         }
-
 
     });
 
-
 });
-
-
-
-
-
-
-
 
 
 /* =========================
    Scroll Reveal
 ========================= */
-
 
 const observer =
 
@@ -420,34 +309,25 @@ new IntersectionObserver(
 
 (entries)=>{
 
+    entries.forEach(entry=>{
 
-entries.forEach(entry=>{
+        if(entry.isIntersecting){
 
+            entry.target.classList.add("show");
 
-    if(entry.isIntersecting){
+        }
 
-
-        entry.target.classList.add("show");
-
-
-    }
-
-
-});
-
+    });
 
 },
 
 {
 
-threshold:0.15
+    threshold:0.15
 
 }
 
 );
-
-
-
 
 
 
@@ -461,22 +341,13 @@ document
 
 .forEach((element)=>{
 
-
     observer.observe(element);
-
 
 });
 
 
-
-
-
-
-
-
-
 /* =========================
-   file Download
+   File Download
 ========================= */
 
 function downloadCoupon(){
@@ -499,7 +370,6 @@ function downloadCoupon(){
 
 
 
-
 function downloadAndLogin(){
 
     openLogin();
@@ -507,16 +377,11 @@ function downloadAndLogin(){
 }
 
 
-
-
-
-
-
 /* =========================
    Loading Message
 ========================= */
 
-
 console.log(
-"BiteGo v3 Loaded 🚀"
+"BiteGo v4 Loaded 🚀"
 );
+```
