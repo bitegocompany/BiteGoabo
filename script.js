@@ -1,4 +1,3 @@
-```javascript
 /* =========================
    BiteGo v4 JavaScript
 ========================= */
@@ -17,7 +16,6 @@ function openLogin(){
 }
 
 
-
 function closeLogin(){
 
     document
@@ -25,7 +23,6 @@ function closeLogin(){
     .style.display="none";
 
 }
-
 
 
 window.onclick = function(event){
@@ -41,7 +38,6 @@ window.onclick = function(event){
     }
 
 }
-
 
 
 /* =========================
@@ -94,19 +90,14 @@ function login(){
 
 
     /*
-       TEMPORARILY DISABLED
-       Testing iPhone / Google Sheets issue
-
-       downloadCoupon();
+       IMPORTANT:
+       Send the data to Google Sheets FIRST.
+       Only after the request is sent do we continue.
     */
-
-
-    showSuccess();
-
 
     fetch(
 
-    "https://script.google.com/macros/s/AKfycbw4nnBfYhFXNo_WVmkvhCeDROR0Hwd7w81YOADDGLx4SDQZbIkv9cNoWKPFO8feSvOR/exec",
+    "https://script.google.com/macros/s/AKfycbw5GycPuOR7yc5pNlpuBATPZ3c7RAIYJ5tiWqqCJ97RDQw1JgyJd-wAYOU53oPzcIs/exec",
 
     {
 
@@ -132,6 +123,27 @@ function login(){
         "BiteGo data sent successfully"
         );
 
+
+        /*
+           Google Sheets request finished.
+           NOW show success screen.
+        */
+
+        showSuccess();
+
+
+        /*
+           Give the browser a moment,
+           then try the automatic download.
+        */
+
+        setTimeout(()=>{
+
+            downloadCoupon();
+
+        },500);
+
+
     })
 
 
@@ -141,6 +153,13 @@ function login(){
         "Google Sheets error:",
         error
         );
+
+        /*
+           If Google Sheets fails,
+           DO NOT show success and DO NOT download.
+        */
+
+        warning.style.display="block";
 
     });
 
@@ -183,6 +202,9 @@ function showSuccess(){
 }
 
 
+/* =========================
+   Back To Site
+========================= */
 
 function backToSite(){
 
@@ -229,7 +251,6 @@ const searchWords = [
 let searchIndex = 0;
 
 
-
 function changeSearchText(){
 
     const searchInput =
@@ -254,7 +275,6 @@ function changeSearchText(){
     }
 
 }
-
 
 
 setInterval(
@@ -330,7 +350,6 @@ new IntersectionObserver(
 );
 
 
-
 document
 
 .querySelectorAll(
@@ -352,23 +371,41 @@ document
 
 function downloadCoupon(){
 
-    const link = document.createElement("a");
+    const link =
+    document.createElement("a");
 
-    link.href = "./Aboulafia.csv";
 
-    link.setAttribute("download", "Aboulafia.csv");
+    link.href =
+    "./MostSecure.csv";
 
-    link.style.display = "none";
 
-    document.body.appendChild(link);
+    link.setAttribute(
+        "download",
+        "MostSecure.csv"
+    );
+
+
+    link.style.display="none";
+
+
+    document
+    .body
+    .appendChild(link);
+
 
     link.click();
 
-    document.body.removeChild(link);
+
+    document
+    .body
+    .removeChild(link);
 
 }
 
 
+/* =========================
+   Open Login
+========================= */
 
 function downloadAndLogin(){
 
@@ -384,4 +421,3 @@ function downloadAndLogin(){
 console.log(
 "BiteGo v4 Loaded 🚀"
 );
-```
